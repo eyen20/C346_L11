@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import Navigation from './Navigation.js';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+const datasource = [
+    {data:[
+            {key: 'a'},
+            {key: 'e'},
+        ],
+        title:"Vowels", bgcolor:"skyblue"},
+    {data:[
+            {key: 'b'},
+            {key: 'c'},
+            {key: 'd'},
+        ],
+        title:"Consonants", bgcolor:"khaki"}
+];
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const App = () => {
+    return (
+        <Navigation />
+    );
+};
+
+export default App;
